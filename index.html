@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdn.datatables.net/2.0.8/css/dataTables.dataTables.css" />
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdn.datatables.net/2.0.8/js/dataTables.js"></script>
+</head>
+<body>
+    
+<script>
+    $(document).ready(function () {
+        $('#T1').DataTable({
+            'ajax': 'data.json',
+            'columns': [
+                { 'data': 'id' },
+                { 'data': 'nom' },
+                { 'data': 'prenom' }
+            ] 
+        });
+    });
+</script>
+
+<table id="T1" border="1" width="100%" cellspacing="0" cellpadding="20"> 
+    <thead>
+        <tr>
+            <th>id</th>
+            <th>nom</th>
+            <th>prenom</th>
+        </tr>
+    </thead>
+    <tbody>
+
+    </tbody>
+</table>
+
+</body>
+</html>
